@@ -1,0 +1,16 @@
+.items-title{
+    text-align: center;
+}
+
+.items-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+/* this is use for responsive */
+@media only screen and (max-width:576px){
+    .items-container{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
