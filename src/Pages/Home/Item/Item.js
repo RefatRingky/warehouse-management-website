@@ -12,13 +12,13 @@ const Item = ({item}) => {
     }
     return (
         <div className='item-container'> 
-            <img src={image} alt='' height='350px' width='400px' />
+            <img src={image} alt='' height='300px' width='350px' />
             <h2>{name}</h2>
             <p>Description:{description}</p>
             <p>price:{price}</p>
             <p>Quantity:{Quantity}</p>
             <p>Supplier Nmae:{sname}</p>
-            <button onClick={() => navigateToInventory(_id)} className='btn btn-primary'>Update</button>
+            <button onClick={() => navigateToInventory(_id)} className='btn btn-danger'>Update</button>
         </div>
     );
 };

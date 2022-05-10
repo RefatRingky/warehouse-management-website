@@ -1,6 +1,10 @@
 .item-container{
+    background-color: bisque;
     border: 1px solid coral;
     border-radius: 8px;
     text-align: center;
     padding-bottom: 10px;
+    background-color:rgb(230, 193, 180);
+    border-radius: 8px;
+    box-shadow: 10px 10px gray;
 }

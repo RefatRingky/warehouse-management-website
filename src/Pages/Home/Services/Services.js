@@ -1,5 +1,6 @@
 import React from 'react';
 import Service from '../Service/Service';
+import './Services.css'
 
 import service1 from '../../../images/service/service1.jpg'
 import service2 from '../../../images/service/service2.jpg'
@@ -21,8 +22,8 @@ const services =[
 const Services = () => {
     return (
         <div id='services' className='container mt-5'>
-            <h2 className='text-danger text-center mt-5'>This is services</h2>
-            <div className='row'>
+            <h2  className=' text-center mt-5 text-danger'>Our Service</h2>
+            <div className='row gx-5 gy-5'>
                  {
                       services.map(service => <Service
                        key={service.id}
