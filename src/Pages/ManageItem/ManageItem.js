@@ -1,17 +1,38 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import useItems from '../../hooks/useItems';
 
 const ManageItem = () => {
-    const [items] = useItems();
+    const navigate =useNavigate()
+    const [items,setItems] = useItems();
+
+    const handleDelete = id =>{
+        const proceed = window.confirm('Are you want to delete?');
+        if(proceed){
+            const url = `http://localhost:5000/item/${id}`
+              fetch(url, {
+                  method: 'DELETE'
+              })
+              .then(res => res.json())
+              .then(data => {
+                  console.log(data);
+                  const remaining = items.filter(item => item._id !== id);
+                  setItems(remaining);
+              })
+        }
+    }
     return (
         <div className='w-50 mx-auto'>
-            <h2>Manage Item</h2>
+            <h2 className='text-center'>Manage Item:</h2>
             {
-                items.map(item => <div key={item._id}>
-                 <h6>{item.name} <button>Delete</button></h6>
+                items.map(item => <div key={item._id} >
 
-                </div>)
+                 <h4>{item.name} <button onClick={() => handleDelete(item._id)} className='btn btn-danger'>Delete</button></h4>
+                 
+                </div> )
+                
             }
+            <div className='text-center'><button onClick={() => navigate('/additem')} className='btn btn-danger w-50 mx-auto'>Add item</button></div>
         </div>
     );
 };

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 
+
 const useItems = () =>{
     const [items,setItems] = useState([]);
 
@@ -8,7 +9,7 @@ const useItems = () =>{
         fetch('http://localhost:5000/item')
         .then(res => res.json())
         .then(data => setItems(data))
-    },[]);
-    return [items];
+    },[])
+    return [items,setItems];
 }
 export default useItems;
