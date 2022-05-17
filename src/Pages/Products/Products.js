@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Item from '../Item/Item';
-import './Items.css';
-import Loading from '../../Shared/Loading/Loading'
+import Item from '../Home/Item/Item';
 
-const Items = () => {
+const Products = () => {
     const [items,setItems] = useState([]);
     const navigate = useNavigate();
 
@@ -20,14 +18,11 @@ const Items = () => {
          <div className='row'>
          <h1 style={{color:'coral'}} className='items-title text-center mt-5 '>Inventory Items</h1>
            <div className='items-container'>
-           {     
-                items.length ?
-                items.slice(0,6).map(item => <Item
+           {
+                items.map(item => <Item
                  key={item._id}
                  item={item}
                 ></Item>)
-                :
-                <Loading></Loading>
             }
            </div>
 
@@ -37,4 +32,4 @@ const Items = () => {
     );
 };
 
-export default Items;
+export default Products;

@@ -33,7 +33,21 @@ const Login = () => {
 
       if(user)
       {
-           navigate(from, { replace: true });
+        fetch('https://whispering-cove-75294.herokuapp.com/login', {
+            method: 'POST',
+            body: JSON.stringify({
+                email: user?.user?.email
+            }),
+            headers: {
+                'Content-type': 'application/json',
+            },
+        })
+            .then(res => res.json())
+            .then(data => {
+                localStorage.setItem("accessToken", data?.token)
+                toast.success('Welcome To Aouto Showroom');
+                navigate(from, { replace: true });
+            });
       }
 
       if (error) {

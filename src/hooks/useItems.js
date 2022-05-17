@@ -6,7 +6,7 @@ const useItems = () =>{
 
 
     useEffect(()=>{
-        fetch('http://localhost:5000/item')
+        fetch('https://whispering-cove-75294.herokuapp.com/item')
         .then(res => res.json())
         .then(data => setItems(data))
     },[])

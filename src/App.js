@@ -1,6 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import About from './Pages/About/About';
 import AddItem from './Pages/AddItem/AddItem';
 import ManageItem from './Pages/ManageItem/ManageItem';
 import MyItem from './Pages/MyItem/MyItem'
@@ -14,6 +13,8 @@ import RequiredAuth from './Pages/Login/RequiredAuth/RequiredAuth';
 import Footer from './Pages/Shared/Footer/Footer'
 import Header from './Pages/Shared/Header/Header';
 import NotFound from './Pages/Shared/NotFound/NotFound';
+import Product from './Pages/Product/Product';
+import Products from './Pages/Products/Products';
 
 function App() {
   return (
@@ -24,7 +25,7 @@ function App() {
         <Route path='/home' element={<Home></Home>}></Route>
         <Route path='item/:itemId' element={<Inventory></Inventory>}></Route>
         <Route path='/blog' element={<Blog></Blog>}></Route>
-        <Route path='/about' element={<About></About>}></Route>
+        <Route path='/product' element={<Products></Products>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
         <Route path='/checkout' element={

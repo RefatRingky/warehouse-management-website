@@ -9,7 +9,7 @@ const ManageItem = () => {
     const handleDelete = id =>{
         const proceed = window.confirm('Are you want to delete?');
         if(proceed){
-            const url = `http://localhost:5000/item/${id}`
+            const url = `https://whispering-cove-75294.herokuapp.com/item/${id}`
               fetch(url, {
                   method: 'DELETE'
               })
@@ -27,7 +27,9 @@ const ManageItem = () => {
             {
                 items.map(item => <div key={item._id} >
 
-                 <h4>{item.name} <button onClick={() => handleDelete(item._id)} className='btn btn-danger'>Delete</button></h4>
+                 <h4>{item.name} <button onClick={() => handleDelete(item._id)} className='btn btn-danger'>Delete</button> <button onClick={() => handleDelete(item._id)} className='btn btn-danger'>Update</button></h4>
+
+                
                  
                 </div> )
                 
