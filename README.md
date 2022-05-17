@@ -1,11 +1,11 @@
 # Rinrav's Dress Collection
  
 
-[GO TO LIVE WEBSITE]().
+[GO TO LIVE WEBSITE](https://assignment-11-client-98ffd.web.app/).
 
 ## Some of my project features 
 * You can see item in item page.
-* You can manage your itemy.
+* You can manage your item.
 * You can edit your item.
 * You can delete your item.
 * You can create your account.
