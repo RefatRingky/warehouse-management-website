@@ -1,28 +1,27 @@
 # Rinrav's Dress Collection
-# AUTO SHOWROOM ....
+ 
 
 [GO TO LIVE WEBSITE]().
 
-## Some features 
-* You can see inventory in inventory page.
-* You can manage your inventory.
-* You can edit your inventory.
-* You can delete your inventory.
+## Some of my project features 
+* You can see item in item page.
+* You can manage your itemy.
+* You can edit your item.
+* You can delete your item.
 * You can create your account.
 * You can add your own products.
 * You can see your added products.
 
 
-### Description
+### Project Description
 * This is a cars diller website. You can buy or sell Dress. you can login with facebook, Google or email password. Can you can see all inventory. You can manage your inventory , like edit delete etc.
 
-#### What technology or assets I have used for building this website.
+#### What technology I have used for building this website.
 * React.js
 * JSX
-* Fontawesome
 * heroicon
 * node js 
-* Tailwind
+* Bootstrap
 * mongodb
 * toast
 * Express
